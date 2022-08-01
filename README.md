@@ -1,3 +1,8 @@
+# getting started
+
+https://esbuild.github.io/getting-started/
+
+
 # build
 
 ```

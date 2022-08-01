@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts" : {
-    "build": "esbuild app.jsx --bundle --outfile=out.js"
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "build-node": "node ./scripts/build-node.js",
+    "start": "node out.js",
+    "test": "ava",
+    "clean": "rm out.js out.js.map"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -12,5 +16,18 @@
   },
   "devDependencies": {
     "esbuild-wasm": "^0.14.51"
-  }
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "keywords": [
+    "template",
+    "typescript",
+    "microbundle",
+    "esbuild",
+    "ava"
+  ]
 }
