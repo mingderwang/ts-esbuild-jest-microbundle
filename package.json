@@ -1,0 +1,16 @@
+{
+  "name": "test1-ts-esbuild-ava",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts" : {
+    "build": "esbuild app.jsx --bundle --outfile=out.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild-wasm": "^0.14.51"
+  }
+}

@@ -1,0 +1,6 @@
+# build
+
+```
+yarn
+yarn build
+```
