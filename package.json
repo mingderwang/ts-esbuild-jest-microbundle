@@ -4,18 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "node ./scripts/build.js",
-    "build-node": "node ./scripts/build-node.js",
-    "start": "node out.js",
+    "build": "yarn clean && node ./scripts/build.js",
+    "build-node": "yarn clean && node ./scripts/build-node.js",
+    "start": "node ./dist/app.js",
     "test": "ava",
-    "clean": "rm out.js out.js.map"
+    "clean": "rimraf out.js out.js.map"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "esbuild-wasm": "^0.14.51"
+    "esbuild-wasm": "^0.14.51",
+    "ts": "^0.2.2"
   },
   "engines": {
     "node": ">=14"

@@ -4,5 +4,5 @@ require('esbuild-wasm').build({
   minify: true,
   sourcemap: true,
   target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
-  outfile: 'out.js',
+  outdir: 'dist',
 }).catch(() => process.exit(1))

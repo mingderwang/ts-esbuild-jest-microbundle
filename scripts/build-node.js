@@ -2,6 +2,6 @@ require('esbuild-wasm').build({
   entryPoints: ['app.js'],
   bundle: true,
   platform: 'node',
-  target: ['node10.4'],
-  outfile: 'out.js',
+  target: ['node16.16'],
+  outdir: 'dist',
 }).catch(() => process.exit(1))
