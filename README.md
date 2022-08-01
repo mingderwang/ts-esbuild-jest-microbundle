@@ -9,7 +9,8 @@
 
 # getting started
 
-https://esbuild.github.io/getting-started/
+* refer to https://esbuild.github.io/getting-started/
+* refer to https://typestrong.org/ts-node/docs/recipes/ava/
 
 
 # build
