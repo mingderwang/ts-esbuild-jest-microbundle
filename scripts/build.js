@@ -1,5 +1,5 @@
 require('esbuild-wasm').build({
-  entryPoints: ['app.jsx'],
+  entryPoints: ['app.tsx'],
   bundle: true,
   minify: true,
   sourcemap: true,

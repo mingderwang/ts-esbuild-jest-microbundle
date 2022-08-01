@@ -1,5 +1,5 @@
 require('esbuild-wasm').build({
-  entryPoints: ['app.js'],
+  entryPoints: ['app.ts'],
   bundle: true,
   platform: 'node',
   target: ['node16.16'],
