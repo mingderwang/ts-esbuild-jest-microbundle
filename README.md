@@ -1,3 +1,12 @@
+# ts-esbuild-jest-microbundle template
+
+> features:
+* typescript
+* jest
+* microbundle
+* esbuild
+
+
 # getting started
 
 https://esbuild.github.io/getting-started/
@@ -7,5 +16,6 @@ https://esbuild.github.io/getting-started/
 
 ```
 yarn
+yarn test
 yarn build
 ```
