@@ -1,6 +1,6 @@
 {
   "name": "ts-esbuild-jest-microbundle",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "source": "src/main.jsx",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
