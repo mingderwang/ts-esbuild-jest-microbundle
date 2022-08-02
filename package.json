@@ -1,12 +1,16 @@
 {
   "name": "ts-esbuild-jest-microbundle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "source": "src/main.jsx",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
   "unpkg": "dist/main.umd.js",
   "types": "dist/main.d.ts",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingderwang/ts-esbuild-jest-microbundle.git"
+  },
   "scripts": {
     "build:test": "node ./scripts/build-test.js",
     "build": "microbundle --define PKG_VERSION=$(npm show . version)",
@@ -18,7 +22,7 @@
     "test:ava": "ava",
     "clean": "rimraf ./dist",
     "prepare": "cd node_modules && ln -s esbuild-wasm esbuild",
-    "public": "np"
+    "release": "np"
   },
   "bin": {
     "dappay": "src/cli.js"
@@ -66,6 +70,9 @@
       "--loader=ts-node/esm"
     ]
   },
-  "repository": "git@github.com:mingderwang/ts-esbuild-jest-microbundle.git",
-  "author": "Ming-der Wang <mingderwang@operamail.com>"
+  "author": {
+    "name": "Ming-der Wang",
+    "email": "mingderwang@gmail.com",
+    "url": "http://mingderwang.tumblr.com/"
+  }
 }
