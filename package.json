@@ -1,12 +1,15 @@
 {
   "name": "ts-esbuild-jest-microbundle",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "source": "src/main.jsx",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
   "unpkg": "dist/main.umd.js",
   "types": "dist/main.d.ts",
   "license": "MIT",
+  "bin": {
+    "xxx": "src/cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mingderwang/ts-esbuild-jest-microbundle.git"
@@ -22,9 +25,6 @@
     "test:ava": "ava",
     "clean": "rimraf ./dist",
     "release": "np"
-  },
-  "bin": {
-    "dappay": "src/cli.js"
   },
   "engines": {
     "node": ">=14"
