@@ -1,6 +1,6 @@
 {
   "name": "ts-esbuild-jest-microbundle",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "source": "src/main.jsx",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
@@ -21,7 +21,6 @@
     "test": "jest",
     "test:ava": "ava",
     "clean": "rimraf ./dist",
-    "prepare": "cd node_modules && ln -s esbuild-wasm esbuild",
     "release": "np"
   },
   "bin": {
