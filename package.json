@@ -1,8 +1,7 @@
 {
   "name": "ts-esbuild-jest-microbundle",
   "version": "0.0.1",
-  "private": true,
-  "source": "src/main.ts",
+  "source": "src/main.jsx",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
   "unpkg": "dist/main.umd.js",
@@ -10,18 +9,36 @@
   "license": "MIT",
   "scripts": {
     "build:test": "node ./scripts/build-test.js",
-    "build": "microbundle",
+    "build": "microbundle --define PKG_VERSION=$(npm show . version)",
+    "watch": "microbundle watch --define PKG_VERSION=$(npm show . version)",
     "build:react": "yarn clean && node ./scripts/build.js",
     "build:node": "yarn clean && node ./scripts/build-node.js",
     "start": "node ./dist/app.js",
     "test": "jest",
-    "test:ava": "ava src/main.test.ts",
+    "test:ava": "ava",
     "clean": "rimraf ./dist",
-    "prepare": "cd node_modules && ln -s esbuild-wasm esbuild"
+    "prepare": "cd node_modules && ln -s esbuild-wasm esbuild",
+    "np": "npm publish --access public"
   },
+  "bin": {
+    "dappay": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [],
+  "keywords": [
+    "template",
+    "typescript",
+    "microbundle",
+    "esbuild",
+    "ava"
+  ],
   "dependencies": {
+    "preact": "^10.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
@@ -36,27 +53,18 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts": "^0.2.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "xo": "^0.51.0"
   },
-  "engines": {
-    "node": ">=14"
-  },
-  "files": [
-    "tsconfig.json"
-  ],
-  "keywords": [
-    "template",
-    "typescript",
-    "microbundle",
-    "esbuild",
-    "ava"
-  ],
   "ava": {
     "extensions": {
       "ts": "module"
     },
     "nodeArguments": [
+      "--trace-warnings",
       "--loader=ts-node/esm"
     ]
-  }
+  },
+  "repository": "git@github.com:mingderwang/ts-esbuild-jest-microbundle.git",
+  "author": "Ming-der Wang <mingderwang@operamail.com>"
 }
