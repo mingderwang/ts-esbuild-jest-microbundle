@@ -29,7 +29,10 @@
   "engines": {
     "node": ">=14"
   },
-  "files": [],
+  "files": [
+    "dist/**.js*",
+    "dist/**/*.ts"
+  ],
   "keywords": [
     "template",
     "typescript",
